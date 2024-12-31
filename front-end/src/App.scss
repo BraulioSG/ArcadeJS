@@ -1,0 +1,57 @@
+*{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--text-950);
+}
+
+html {
+  background: var(--background-50);
+}
+
+input {
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  color: black;
+  
+  &:hover{
+    background: #eee;
+  }
+}
+
+button {
+  width: 100%;
+  padding: 7px;
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+
+  &:hover{
+    cursor:pointer;
+  }
+
+  &.secondary{
+    background: var(--background-100);
+    
+    &:hover{
+      background: var(--background-200);
+    }
+  }
+
+  &.callToAction{
+    background: var(--accent-500);
+    color: black;
+
+    &:hover{
+      background: var(--accent-300);
+    }
+  }
+}
+
+

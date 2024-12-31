@@ -4,6 +4,14 @@ using arcade.ApplicationDbContext;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
+//CORS
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy => policy.WithOrigins("http://localhost:5173"));
+});
+
 // Add services to the container.
 builder.Services.AddDbContext<ArcadeContext>(options =>
 {
@@ -24,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

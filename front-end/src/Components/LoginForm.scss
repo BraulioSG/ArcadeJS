@@ -1,0 +1,19 @@
+.LoginForm{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .LoginForm-inputGroups{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .inputGroup{
+      display: flex;
+      flex-direction: column;
+
+    }
+  }
+
+}
