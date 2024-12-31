@@ -291,6 +291,9 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-./*.db
-./*.db-journal
-./*.sqbpro
+*/*.db
+*/*.db-journal
+*/*.sqbpro
+
+
+*/Migrations
